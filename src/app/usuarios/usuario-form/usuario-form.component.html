@@ -1,0 +1,45 @@
+<div class="container align-items-center">
+<div class="col-lg-4 align-items-center">
+        <div class="row g-6  align-items-center">
+          <div class="col-lg-12 align-items-center">
+            <h4 class="mb-3" >Registro de Usuarios</h4>
+            <img src="/assets/img/anonimo.jpeg" alt="Usuario">
+          </div>
+          </div>
+          
+        <form (ngSubmit)="onSubmit()">
+          <div class="row g-6">
+            <div class="col-lg-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" [(ngModel)]="usuario.email" class="form-control" name="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Favor de indicar un email vàlido.
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <label for="senha" class="form-label">Contraseña</label>
+              <input type="password" [(ngModel)]="usuario.senha" class="form-control" name="senha" value="" placeholder="" required>
+              <div class="invalid-feedback">
+                La contraseña debe ser de 8 caracteres, debe incluir al menos un nùmero, minùsculas y mayùsculas.
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <label for="nombreUsuario" class="form-label">Nombre</label>
+              <input type="text" [(ngModel)]="usuario.nombreUsuario" class="form-control" name="nombreUsuario" value="" placeholder="Jhon Smith" required>
+              <div class="invalid-feedback">
+                Colocar un nombre vàlido.
+              </div>
+            </div>
+
+          <hr class="my-4">
+
+
+          <button class="btn btn-primary btn-lg" type="submit" >Registrarse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
